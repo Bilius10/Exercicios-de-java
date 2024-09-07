@@ -9,11 +9,24 @@ public class ex14 {
         int inicio = teclado.nextInt();
         int fim = teclado.nextInt();
         
-        for(int x = 1; x <= fim; x++){
+        for(int x = inicio; x <= fim; x++){
 
+            boolean primo = true;
+
+            for(double y = 2; y < x; y++){
+
+                if(x % y == 0){
+                    primo = false;
+                }
+
+            }
             
+            if(primo){
+                System.out.println(x+" é primo");
+            }
+
         }
-        
-        
-    }
+
+    } 
 }
+
